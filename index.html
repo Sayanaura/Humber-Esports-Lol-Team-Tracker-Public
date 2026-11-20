@@ -17,5 +17,13 @@
   <main>
     <img src="solo_progress.png" alt="Humber Esports Solo/Duo LP progression for the last 30 days">
   </main>
+  <script>
+    const graph = document.querySelector('main img');
+    function refreshGraph() {
+      graph.src = 'solo_progress.png?v=' + Date.now();
+    }
+    refreshGraph();
+    setInterval(refreshGraph, 15 * 60 * 1000);
+  </script>
 </body>
 </html>
